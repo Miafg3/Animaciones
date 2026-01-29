@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login-container">
+
+        <h2>Welcome</h2>
+        <p>Select the authentication method</p>
+
+        <form>
+            <p>
+                <label for="username">Username</label>
+                <input class="input" type="text" name="username" id="username" required autocomplete="username">
+            </p>
+
+            <p>
+                <label for="password">Password</label>
+                <input class="input" type="password" name="password" id="password" required autocomplete="current-password">
+            </p>
+
+            <div class="options">
+                <label class="remember">
+                    <input type="checkbox" name="rememberme" id="rememberme">
+                    Remember me
+                </label>
+                <a href="#">I forgot my password</a>
+            </div>
+
+            <p>
+                <input class="btn btn-login" type="submit" value="Log in">
+            </p>
+
+            <div class="providers">
+
+                <span>Choose another method to authenticate</span>
+
+                <button type="button" class="btn google-provider">
+                    Google
+                </button>
+
+                <button type="button" class="btn facebook-provider">
+                    Facebook
+                </button>
+
+                <button type="button" class="btn twitter-provider">
+                    Twitter
+                </button>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
