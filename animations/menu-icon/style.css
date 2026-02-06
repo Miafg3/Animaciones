@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    border-radius: 100%;
+    justify-content: center;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.center {
+    transition: 0.5s ease;
+}
+
+.line {
+    width: 80px;
+    height: 8px;
+    background: #fff;
+    border-radius: 2px;
+    animation-play-state: running;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.one {
+    animation: one-in 0.5s ease-in;
+}
+
+.two {
+    margin: 15px 0;
+    animation: two-in 0.5s ease-in;
+}
+
+.three {
+    animation: three-in 0.5s ease-in;
+}
+
+.center.active .one {
+    animation: one-out 0.5s ease-out forwards;
+}
+
+.center.active .two {
+    animation: two-out 0.5s ease-out forwards;
+}
+
+.center.center.active .three {
+    animation: three-out 0.5s ease-out forwards;
+}
+
+.no-animation {
+    animation: none!important;
+}
+
+@keyframes one-in {
+    
+    0% {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    50% {
+        transform: translateY(12px) rotate(0);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes one-out {
+
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(12px) rotate(0);
+    }
+
+    100% {
+        transform: translateY(8px) rotate(45deg);
+    }
+}
+
+@keyframes two-in {
+
+    0% {
+        transform: scale(0);
+        margin: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        margin: 15px 0;
+    }
+}
+
+@keyframes two-out {
+
+    0% {
+        transform: scale(1);
+        margin: 15px 0;
+    }
+
+    100% {
+        transform: scale(0);
+        margin: 0;
+    }
+}
+
+@keyframes three-in {
+
+    0% {
+        transform: translateY(-8px) rotate(135deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(0);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes three-out {
+
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {   
+        transform: translateY(-12px) rotate(0);
+    }
+
+    100% {
+        transform: translateY(-8px) rotate(135deg);
+    }
+}
